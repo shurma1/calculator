@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/lightThemePrimaryBackground</item>
+        <item name="colorPrimaryVariant">@color/lightThemeSecondaryBackground</item>
+        <item name="android:textColorPrimary">@color/lightThemePrimaryText</item>
+        <item name="android:buttonStyle">@color/lightThemePrimaryButton</item>
+
+        <item name="android:statusBarColor">@color/lightThemePrimaryBackground</item>
+        <item name="android:navigationBarColor">@color/lightThemeSecondaryBackground</item>
+    </style>
+</resources>

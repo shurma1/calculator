@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorGreen">#26F6D0</color>
+    <color name="colorRed">#EC6666</color>
+
+    <!-- Light Theme -->
+    <color name="lightThemePrimaryText">#FFFFFF</color>
+    <color name="lightThemePrimaryBackground">#22252D</color>
+    <color name="lightThemeSecondaryBackground">#292D36</color>
+    <color name="lightThemePrimaryButton">#252830</color>
+
+    <!-- Dark Theme -->
+    <color name="darkThemePrimaryText">#292D36</color>
+    <color name="darkThemePrimaryBackground">#FFFFFF</color>
+    <color name="darkThemeSecondaryBackground">#F9F9F9</color>
+    <color name="darkThemePrimaryButton">#F6F6F6</color>
+</resources>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="?attr/colorPrimary">
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="125dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:id="@+id/theme_switch_container"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/rounded_corners"-->
+
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            app:cornerRadius="@dimen/button_radius"-->
+<!--            android:id="@+id/button_switch_theme_light"-->
+<!--            android:layout_margin="@dimen/button_margin">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/sun"-->
+<!--                app:tint="@android:color/white"/>-->
+
+
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            app:cornerRadius="@dimen/button_radius"-->
+<!--            android:textColor="@color/colorGreen"-->
+<!--            android:textSize="@dimen/button_text_size"-->
+<!--            android:id="@+id/button_switch_theme_dark"-->
+<!--            android:layout_margin="@dimen/button_margin">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/moon"-->
+<!--                app:tint="@android:color/white"/>-->
+
+
+<!--        </RelativeLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingHorizontal="30dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/result_container"
+        android:orientation="vertical"
+        android:gravity="end"
+        >
+
+        <com.reassel.calculator.ResultView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="?attr/android:textColorPrimary"
+            android:textSize="30sp"/>
+
+        <com.reassel.calculator.ResultView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="?attr/android:textColorPrimary"
+            android:textSize="50sp"/>
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/buttons_layout"
+            android:background="@drawable/rounded_top_corners"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_c"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_c"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_open_bracket"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_open_bracket"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_close_bracket"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_close_bracket"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_division"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_division"
+                    android:layout_margin="@dimen/button_margin"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_seven"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_seven"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_eight"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_eight"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_nine"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_nine"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_multiplication"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_multiplication"
+                    android:layout_margin="@dimen/button_margin"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_four"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_four"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_five"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_five"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_six"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_six"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_plus"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_plus"
+                    android:layout_margin="@dimen/button_margin"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_one"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_one"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_two"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_two"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_three"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_three"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_mines"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_mines"
+                    android:layout_margin="@dimen/button_margin"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_AC"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size_small"
+                    android:id="@+id/button_AC"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_zero"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_zero"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_dot"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_dot"
+                    android:layout_margin="@dimen/button_margin"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:text="@string/button_result"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/button_text_size"
+                    android:id="@+id/button_result"
+                    android:layout_margin="@dimen/button_margin"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
